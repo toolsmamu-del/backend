@@ -16,6 +16,7 @@ const adminRoutes = require('./api/admin');
 const webhookRoutes = require('./api/webhook');
 const exportRoutes = require('./api/export');
 const templateRoutes = require('./api/template');
+const shutdownRoutes = require('./api/shutdown');
 
 const app = express();
 const server = http.createServer(app);
@@ -36,6 +37,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/webhook', webhookRoutes);
 app.use('/api/export', exportRoutes);
 app.use('/api/template', templateRoutes);
+app.use('/api/shutdown', shutdownRoutes);
 
 io.on('connection', (socket) => { console.log('Socket:', socket.id); socket.on('disconnect', () => console.log('Socket gone:', socket.id)); });
 
