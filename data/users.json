@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "u_admin",
+    "fullName": "Admin User",
+    "username": "admin",
+    "email": "admin@trackmaster.com",
+    "password": "$2b$12$YxAphE3nSs3ZKmNJu4XbS.wIuc2hLeYGJNhaWMvgYXzO9G0tehpsC",
+    "role": "admin",
+    "status": "active",
+    "trackingCode": "ADMIN01",
+    "created_at": "2026-04-24T12:40:15.500Z"
+  },
+  {
+    "_id": "u_user",
+    "fullName": "Demo User",
+    "username": "user",
+    "email": "user@trackmaster.com",
+    "password": "$2b$12$T0xXfL.rY8DLwiUkBikWree7.v2gjFKaznbqHIn3o/5DWDMXN4kuq",
+    "role": "user",
+    "status": "active",
+    "trackingCode": "USER01",
+    "created_at": "2026-04-24T12:40:15.501Z"
+  }
+]
