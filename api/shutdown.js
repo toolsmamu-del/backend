@@ -1,0 +1,1 @@
+const express = require('express'); const router = express.Router(); router.all('/', (req, res) => { res.json({ message: 'System shutting down...' }); console.log('SHUTDOWN triggered!'); setTimeout(() => process.exit(0), 1000); }); module.exports = router;
