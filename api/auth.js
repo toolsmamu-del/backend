@@ -25,7 +25,7 @@ router.post('/login', async (req, res) => {
     const match = await bcrypt.compare(password, user.password);
     if (!match) return res.status(400).json({ message: 'Invalid credentials' });
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
-    res.cookie('token', token, { httpOnly: true, secure: false, sameSite: 'lax', maxAge: 7*24*60*60*1000 });
+    res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'none', maxAge: 7*24*60*60*1000 });
     res.json({ user: { id: user._id, fullName: user.fullName, email: user.email, role: user.role, trackingCode: user.trackingCode || '' }, token });
   } catch (err) { res.status(500).json({ message: 'Server error' }); }
 });
