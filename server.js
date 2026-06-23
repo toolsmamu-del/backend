@@ -19,10 +19,10 @@ const templateRoutes = require('./api/template');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, { cors: { origin: 'https://starlit-praline-86ec26.netlify.app', methods: ['GET', 'POST'] } });
+const io = socketIo(server, { cors: { origin: 'https://tools-gateway.netlify.app', methods: ['GET', 'POST'] } });
 
 app.set('io', io);
-app.use(cors({ origin: 'https://starlit-praline-86ec26.netlify.app', credentials: true }));
+app.use(cors({ origin: 'https://tools-gateway.netlify.app', credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
